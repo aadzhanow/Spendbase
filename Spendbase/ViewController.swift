@@ -9,9 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let myLabel = UILabel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .systemBackground
+
+        myLabel.text = "Hello, World!"
+        myLabel.frame = CGRect(x: 20, y: 20, width: 200, height: 40)
+        view.addSubview(myLabel)
+
     }
 
 
