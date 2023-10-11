@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iconCreditCardRegular.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
