@@ -6,11 +6,90 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeView: UIView {
     
     // MARK: - UI Properties
-    let myLabel = UILabel()
+    
+    let availableBalanceView: ContainerView = {
+        let view = ContainerView()
+        return view
+    }()
+    
+    let availableBalanceHorizontalStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.distribution = .fill
+        stack.spacing = 8
+        return stack
+    }()
+    
+    let accountCurrencyImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: CustomImages.imageUsFlag)
+        return imageView
+    }()
+    
+    let accountCurrencyLabel: StyledLabel = {
+        let label = StyledLabel(textStyle: .labelLarge)
+        label.text = K.accountCurrency
+        return label
+    }()
+    
+    let currentBalanceLabel: StyledLabel = {
+        let label = StyledLabel(textStyle: .headlineMedium)
+        label.text = K.currentBalance
+        return label
+    }()
+    
+    // My Cards Table View
+    let containerMyCardsTableView: ContainerView = {
+        let view = ContainerView()
+        return view
+    }()
+    
+    let myCardsLabel: StyledLabel = {
+        let label = StyledLabel(textStyle: .titleMedium)
+        label.text = K.myCardsTitle
+        return label
+    }()
+    
+    let seeAllCardsButton: UnderlinedButton = {
+        let button = UnderlinedButton(type: .custom)
+        button.setTitle(K.seeAll, for: .normal)
+        return button
+    }()
+    
+    let myCardsTableView: UITableView = {
+        let tv = UITableView()
+        return tv
+    }()
+    
+    // Recent Transactions Table View
+    let containerTransactionsTableView: ContainerView = {
+        let view = ContainerView()
+        return view
+    }()
+    
+    let recentTransactionsLabel: StyledLabel = {
+        let label = StyledLabel(textStyle: .titleMedium)
+        label.text = K.recentTransactionsTitle
+        return label
+    }()
+    
+    let seeTransactionsButton: UnderlinedButton = {
+        let button = UnderlinedButton(type: .custom)
+        button.setTitle(K.seeAll, for: .normal)
+        return button
+    }()
+    
+    let recentTransactionsTableView: UITableView = {
+        let tv = UITableView()
+        return tv
+    }()
+    
     
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -24,14 +103,114 @@ class HomeView: UIView {
     
     // MARK: - Private Methods
     private func setupViews() {
-        backgroundColor = .red
-
+        backgroundColor = UIColor(named: BrandColors.backgroundOne)
+//        backgroundColor = .blue
         
         // MARK: - View hierarchy setup
-        addSubview(myLabel)
+        
+        // Available Balance View
+        addSubview(availableBalanceView)
+        availableBalanceView.addSubview(availableBalanceHorizontalStack)
+        availableBalanceHorizontalStack.addArrangedSubview(accountCurrencyImageView)
+        availableBalanceHorizontalStack.addArrangedSubview(accountCurrencyLabel)
+        availableBalanceView.addSubview(currentBalanceLabel)
+        
+        // My Cards View
+        addSubview(containerMyCardsTableView)
+        containerMyCardsTableView.addSubview(myCardsLabel)
+        containerMyCardsTableView.addSubview(seeAllCardsButton)
+        
+        // My Recent Transactions View
+        addSubview(containerTransactionsTableView)
+        containerTransactionsTableView.addSubview(recentTransactionsLabel)
+        containerTransactionsTableView.addSubview(seeTransactionsButton)
         
         // MARK: - Layout & Constraints
-        myLabel.frame = CGRect(x: 20, y: 20, width: 200, height: 40)
+        
+        // Available Balance View
+        availableBalanceView.snp.makeConstraints { make in
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(24)
+            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.bottom.equalTo(self.currentBalanceLabel.snp.bottom).offset(16)
+        }
+        
+        availableBalanceHorizontalStack.snp.makeConstraints { make in
+            make.top.equalTo(self.availableBalanceView.snp.top).offset(20)
+            make.leading.equalTo(self.availableBalanceView.snp.leading).offset(16)
+            make.trailing.equalTo(self.availableBalanceView.snp.trailing).offset(-16)
+        }
+        
+        accountCurrencyImageView.snp.makeConstraints { make in
+            make.width.equalTo(22)
+            make.height.equalTo(16)
+        }
+        
+        currentBalanceLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.availableBalanceHorizontalStack.snp.bottom).offset(8)
+            make.leading.equalTo(self.availableBalanceView.snp.leading).offset(16)
+            make.trailing.equalTo(self.availableBalanceView.snp.trailing).offset(-16)
+        }
+        
+        // My Cards View
+        containerMyCardsTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.availableBalanceView.snp.bottom).offset(16)
+            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.height.equalTo(250)
+        }
+        
+        myCardsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
+            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(16)
+        }
+        
+        seeAllCardsButton.snp.makeConstraints { make in
+            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
+            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(-16)
+            make.width.equalTo(46)
+            make.height.equalTo(20)
+        }
+        
+        // My Cards View
+        containerMyCardsTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.availableBalanceView.snp.bottom).offset(16)
+            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.height.equalTo(250)
+        }
+        
+        myCardsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
+            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(16)
+        }
+        
+        seeAllCardsButton.snp.makeConstraints { make in
+            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
+            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(-16)
+            make.width.equalTo(46)
+            make.height.equalTo(20)
+        }
+        
+        // Recent Transactions View Constraints
+        containerTransactionsTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.containerMyCardsTableView.snp.bottom).offset(16)
+            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.height.equalTo(250)
+        }
+        
+        recentTransactionsLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.containerTransactionsTableView.snp.top).offset(16)
+            make.leading.equalTo(self.containerTransactionsTableView.snp.leading).offset(16)
+        }
+        
+        seeTransactionsButton.snp.makeConstraints { make in
+            make.top.equalTo(self.containerTransactionsTableView.snp.top).offset(16)
+            make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(-16)
+            make.width.equalTo(46)
+            make.height.equalTo(20)
+        }
         
     }
 }

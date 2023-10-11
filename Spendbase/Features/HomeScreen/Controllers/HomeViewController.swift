@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     override func loadView() {
         view = HomeView()
     }
-    
+        
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

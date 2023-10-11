@@ -12,6 +12,7 @@ struct BrandColors {
     static let backgroundTwo = "backgroundTwo"
     static let layerOne = "layerOne"
     static let layerTwo = "layerTwo"
+    static let layerThree = "layerThree"
     static let systemOne = "systemOne"
     static let systemTwo = "systemTwo"
     static let systemThree = "systemThree"
@@ -29,6 +30,7 @@ struct IconUI {
     static let iconLock = "iconLock"
     static let iconMagnifyingGlass = "iconMagnifyingGlass"
     static let iconPlus = "iconPlus"
+    static let iconNext = "iconNext"
 }
 
 // MARK: - Custom Images
@@ -57,4 +59,12 @@ struct TabBarIcons {
 struct ReceiptsIcons {
     static let iconReceiptAdded = "iconReceiptAdded"
     static let iconReceiptNotAdded = "iconReceiptNotAdded"
+}
+
+// MARK: - Fonts
+struct Fonts {
+    static let sfProTextRegular = "SF-Pro-Text-Regular"
+    static let interExtraBold = "Inter-ExtraBold"
+    static let interMedium = "Inter-Medium"
+    static let interSemiBold = "Inter-SemiBold"
 }
