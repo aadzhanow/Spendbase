@@ -9,7 +9,7 @@ import Foundation
 
 struct K {
     static let accountCurrency = "USD account"
-    static let currentBalance = "$100,000"
+    static let currentBalance = "$1,000,000"
     static let recentTransactionsTitle = "Recent transactions"
     static let seeAll = "See All"
     static let moneyTitle = "Money"
