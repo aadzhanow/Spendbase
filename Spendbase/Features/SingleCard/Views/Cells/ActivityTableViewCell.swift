@@ -12,7 +12,7 @@ class ActivityTableViewCell: UITableViewCell {
     // MARK: - UI Properties
     let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .clear
+        view.backgroundColor = UIColor(named: BrandColors.backgroundTwo)
         return view
     }()
     
