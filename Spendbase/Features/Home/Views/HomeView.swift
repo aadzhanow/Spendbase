@@ -63,6 +63,7 @@ class HomeView: UIView {
     
     let myCardsTableView: UITableView = {
         let tv = UITableView()
+        tv.backgroundColor = .red
         return tv
     }()
     
@@ -86,6 +87,7 @@ class HomeView: UIView {
     
     let recentTransactionsTableView: UITableView = {
         let tv = UITableView()
+        tv.backgroundColor = .blue
         return tv
     }()
     
@@ -103,7 +105,6 @@ class HomeView: UIView {
     // MARK: - Private Methods
     private func setupViews() {
         backgroundColor = UIColor(named: BrandColors.backgroundOne)
-//        backgroundColor = .blue
         
         // MARK: - View hierarchy setup
         
@@ -118,11 +119,13 @@ class HomeView: UIView {
         addSubview(containerMyCardsTableView)
         containerMyCardsTableView.addSubview(myCardsLabel)
         containerMyCardsTableView.addSubview(seeAllCardsButton)
+        addSubview(myCardsTableView)
         
         // My Recent Transactions View
         addSubview(containerTransactionsTableView)
         containerTransactionsTableView.addSubview(recentTransactionsLabel)
         containerTransactionsTableView.addSubview(seeTransactionsButton)
+        addSubview(recentTransactionsTableView)
         
         // MARK: - Layout & Constraints
         
@@ -171,24 +174,11 @@ class HomeView: UIView {
             make.height.equalTo(20)
         }
         
-        // My Cards View
-        containerMyCardsTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.availableBalanceView.snp.bottom).offset(16)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
-            make.height.equalTo(250)
-        }
-        
-        myCardsLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
-            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(16)
-        }
-        
-        seeAllCardsButton.snp.makeConstraints { make in
-            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
-            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(-16)
-            make.width.equalTo(46)
-            make.height.equalTo(20)
+        myCardsTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.myCardsLabel.snp.bottom).offset(8)
+            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(0)
+            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(0)
+            make.bottom.equalTo(self.containerMyCardsTableView.snp.bottom).offset(-16)
         }
         
         // Recent Transactions View Constraints
@@ -209,6 +199,13 @@ class HomeView: UIView {
             make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(-16)
             make.width.equalTo(46)
             make.height.equalTo(20)
+        }
+        
+        recentTransactionsTableView.snp.makeConstraints { make in
+            make.top.equalTo(self.recentTransactionsLabel.snp.bottom).offset(8)
+            make.leading.equalTo(self.containerTransactionsTableView.snp.leading).offset(0)
+            make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(0)
+            make.bottom.equalTo(self.containerTransactionsTableView.snp.bottom).offset(0)
         }
         
     }
