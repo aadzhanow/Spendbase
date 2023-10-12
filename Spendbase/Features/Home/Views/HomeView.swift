@@ -63,12 +63,12 @@ class HomeView: UIView {
     
     let myCardsTableView: UITableView = {
         let tv = UITableView()
-        tv.backgroundColor = .red
+        tv.backgroundColor = .clear
         return tv
     }()
     
     // Recent Transactions Table View
-    let containerTransactionsTableView: ContainerView = {
+    let containerTransactionsCollectionView: ContainerView = {
         let view = ContainerView()
         return view
     }()
@@ -130,9 +130,9 @@ class HomeView: UIView {
         addSubview(myCardsTableView)
         
         // My Recent Transactions View
-        addSubview(containerTransactionsTableView)
-        containerTransactionsTableView.addSubview(recentTransactionsLabel)
-        containerTransactionsTableView.addSubview(seeTransactionsButton)
+        addSubview(containerTransactionsCollectionView)
+        containerTransactionsCollectionView.addSubview(recentTransactionsLabel)
+        containerTransactionsCollectionView.addSubview(seeTransactionsButton)
         addSubview(recentTransactionsCollectionView)
         
         // MARK: - Layout & Constraints
@@ -190,7 +190,7 @@ class HomeView: UIView {
         }
         
         // Recent Transactions View Constraints
-        containerTransactionsTableView.snp.makeConstraints { make in
+        containerTransactionsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(self.containerMyCardsTableView.snp.bottom).offset(16)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
@@ -198,22 +198,22 @@ class HomeView: UIView {
         }
         
         recentTransactionsLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerTransactionsTableView.snp.top).offset(16)
-            make.leading.equalTo(self.containerTransactionsTableView.snp.leading).offset(16)
+            make.top.equalTo(self.containerTransactionsCollectionView.snp.top).offset(16)
+            make.leading.equalTo(self.containerTransactionsCollectionView.snp.leading).offset(16)
         }
         
         seeTransactionsButton.snp.makeConstraints { make in
-            make.top.equalTo(self.containerTransactionsTableView.snp.top).offset(16)
-            make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(-16)
+            make.top.equalTo(self.containerTransactionsCollectionView.snp.top).offset(16)
+            make.trailing.equalTo(self.containerTransactionsCollectionView.snp.trailing).offset(-16)
             make.width.equalTo(46)
             make.height.equalTo(20)
         }
         
         recentTransactionsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(self.recentTransactionsLabel.snp.bottom).offset(8)
-            make.leading.equalTo(self.containerTransactionsTableView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerTransactionsTableView.snp.bottom).offset(-16)
+            make.leading.equalTo(self.containerTransactionsCollectionView.snp.leading).offset(0)
+            make.trailing.equalTo(self.containerTransactionsCollectionView.snp.trailing).offset(0)
+            make.bottom.equalTo(self.containerTransactionsCollectionView.snp.bottom).offset(-16)
         }
         
     }

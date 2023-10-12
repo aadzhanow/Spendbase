@@ -22,7 +22,7 @@ extension UIFont {
     }
     
     static var labelMedium: UIFont {
-        return UIFont(name: Fonts.interMedium, size: 16) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
+        return UIFont(name: Fonts.interMedium, size: 14) ?? UIFont.systemFont(ofSize: 16, weight: .medium)
     }
     
     static var labelSmall: UIFont {

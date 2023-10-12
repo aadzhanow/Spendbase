@@ -16,6 +16,10 @@ struct K {
     static let transactionsTitle = "Transactions"
     static let myCardsTitle = "My cards"
     static let accountTitle = "Account"
+    static let activityTitle = "Activity"
+    static let buttonTitleDetails = "Details"
+    static let buttonTitleLock = "Lock"
+    static let buttonTitleTerminate = "Terminate"
 }
 
 struct Placeholders {
@@ -23,6 +27,9 @@ struct Placeholders {
     static let cardNumberShort = "0129"
     static let cardNumberWIthDots = "•• 2911"
     static let amount = "$34"
+    static let transactionDeclined = "Declined"
+    static let transactionName = "Hotel"
+    static let transactionDate = "Aug 27"
 }
 
 struct TabBarTitles {

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "spendbaseLogo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

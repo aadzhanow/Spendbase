@@ -43,9 +43,17 @@
 		7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F42AD7DEBC0007EB73 /* CardModels.swift */; };
 		7492C0F72AD7E3600007EB73 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F62AD7E3600007EB73 /* SampleData.swift */; };
 		7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */; };
-		7492C0FC2AD805CA0007EB73 /* HomeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0FB2AD805CA0007EB73 /* HomeViewController+TableView.swift */; };
+		7492C0FC2AD805CA0007EB73 /* HomeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */; };
 		7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */; };
 		7492C1042AD8174B0007EB73 /* HomeViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */; };
+		7492C1062AD81B3B0007EB73 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1052AD81B3B0007EB73 /* SingleCardView.swift */; };
+		7492C1082AD81B510007EB73 /* SingleCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1072AD81B510007EB73 /* SingleCardViewController.swift */; };
+		7492C10B2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C10A2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift */; };
+		7492C10E2AD8511E0007EB73 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C10D2AD8511E0007EB73 /* ButtonModel.swift */; };
+		7492C1112AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1102AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift */; };
+		7492C1132AD856730007EB73 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1122AD856730007EB73 /* ActivityTableViewCell.swift */; };
+		7492C1152AD879CD0007EB73 /* TableViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1142AD879CD0007EB73 /* TableViewSectionHeader.swift */; };
+		7492C1172AD896900007EB73 /* SingleCardViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1162AD896900007EB73 /* SingleCardViewController+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,9 +93,17 @@
 		7492C0F42AD7DEBC0007EB73 /* CardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModels.swift; sourceTree = "<group>"; };
 		7492C0F62AD7E3600007EB73 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
-		7492C0FB2AD805CA0007EB73 /* HomeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+TableView.swift"; sourceTree = "<group>"; };
+		7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionCell.swift; sourceTree = "<group>"; };
 		7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		7492C1052AD81B3B0007EB73 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		7492C1072AD81B510007EB73 /* SingleCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardViewController.swift; sourceTree = "<group>"; };
+		7492C10A2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
+		7492C10D2AD8511E0007EB73 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
+		7492C1102AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleCardViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		7492C1122AD856730007EB73 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		7492C1142AD879CD0007EB73 /* TableViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionHeader.swift; sourceTree = "<group>"; };
+		7492C1162AD896900007EB73 /* SingleCardViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleCardViewController+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7492C0F62AD7E3600007EB73 /* SampleData.swift */,
-				7492C0FB2AD805CA0007EB73 /* HomeViewController+TableView.swift */,
+				7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */,
 				7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */,
 			);
 			path = Extensions;
@@ -293,6 +309,8 @@
 		7492C0D22AD710930007EB73 /* SingleCard */ = {
 			isa = PBXGroup;
 			children = (
+				7492C10F2AD854BE0007EB73 /* Extensions */,
+				7492C10C2AD851120007EB73 /* Models */,
 				7492C0D92AD7143B0007EB73 /* Views */,
 				7492C0D82AD714350007EB73 /* Contollers */,
 			);
@@ -345,6 +363,7 @@
 		7492C0D82AD714350007EB73 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				7492C1072AD81B510007EB73 /* SingleCardViewController.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -352,6 +371,9 @@
 		7492C0D92AD7143B0007EB73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7492C1092AD83B3A0007EB73 /* Cells */,
+				7492C1052AD81B3B0007EB73 /* SingleCardView.swift */,
+				7492C1142AD879CD0007EB73 /* TableViewSectionHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,17 +437,43 @@
 		7492C0FF2AD80B100007EB73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7492C1002AD80B180007EB73 /* CollectionViewCells */,
+				7492C1002AD80B180007EB73 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7492C1002AD80B180007EB73 /* CollectionViewCells */ = {
+		7492C1002AD80B180007EB73 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */,
 			);
-			path = CollectionViewCells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7492C1092AD83B3A0007EB73 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7492C10A2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift */,
+				7492C1122AD856730007EB73 /* ActivityTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7492C10C2AD851120007EB73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7492C10D2AD8511E0007EB73 /* ButtonModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7492C10F2AD854BE0007EB73 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7492C1102AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift */,
+				7492C1162AD896900007EB73 /* SingleCardViewController+UITableView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,13 +566,15 @@
 				7492C0A52AD6BFC70007EB73 /* Constants.swift in Sources */,
 				7492C1042AD8174B0007EB73 /* HomeViewController+UICollectionView.swift in Sources */,
 				7492C0F72AD7E3600007EB73 /* SampleData.swift in Sources */,
+				7492C1112AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift in Sources */,
 				7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */,
-				7492C0FC2AD805CA0007EB73 /* HomeViewController+TableView.swift in Sources */,
+				7492C0FC2AD805CA0007EB73 /* HomeViewController+UITableView.swift in Sources */,
 				7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */,
 				7492C0882AD6B69A0007EB73 /* HomeViewController.swift in Sources */,
 				7492C0E92AD715570007EB73 /* AccountView.swift in Sources */,
 				7492C0A32AD6BD930007EB73 /* HomeView.swift in Sources */,
 				7492C0E12AD714FE0007EB73 /* MyCardsViewController.swift in Sources */,
+				7492C1132AD856730007EB73 /* ActivityTableViewCell.swift in Sources */,
 				7492C0842AD6B69A0007EB73 /* AppDelegate.swift in Sources */,
 				7492C0DF2AD714E00007EB73 /* TransactionsViewController.swift in Sources */,
 				7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */,
@@ -535,10 +585,16 @@
 				7492C0C52AD6E99F0007EB73 /* UIFont+CustomFonts.swift in Sources */,
 				7492C0E52AD715260007EB73 /* AccountViewController.swift in Sources */,
 				7492C0AC2AD6DE960007EB73 /* Strings.swift in Sources */,
+				7492C10E2AD8511E0007EB73 /* ButtonModel.swift in Sources */,
+				7492C10B2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift in Sources */,
+				7492C1152AD879CD0007EB73 /* TableViewSectionHeader.swift in Sources */,
 				7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */,
 				7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */,
 				7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */,
 				7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */,
+				7492C1082AD81B510007EB73 /* SingleCardViewController.swift in Sources */,
+				7492C1062AD81B3B0007EB73 /* SingleCardView.swift in Sources */,
+				7492C1172AD896900007EB73 /* SingleCardViewController+UITableView.swift in Sources */,
 				7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

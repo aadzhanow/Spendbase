@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         headerView = view.addHeaderView()
         headerView?.setTitle(K.moneyTitle)
         
-        loadSampleData()
+//        loadSampleData()
         setupTableView()
         setupCollectionView()
     }

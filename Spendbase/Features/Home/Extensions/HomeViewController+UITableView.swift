@@ -18,6 +18,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         mainView.myCardsTableView.isScrollEnabled = false
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let singleCardVC = SingleCardViewController()
+
+        self.navigationController?.pushViewController(singleCardVC, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -40,6 +40,7 @@ struct CustomImages {
     static let imageCardLarge = "imageCardLarge"
     static let imageCardSmall = "imageCardSmall"
     static let imageUsFlag = "imageUsFlag"
+    static let imageShadow = "imageShadow"
 }
 
 // MARK: - Other Company Logos
@@ -47,6 +48,8 @@ struct Logos {
     static let imageGoogleLogo = "imageGoogleLogo"
     static let imageNotionLogo = "imageNotionLogo"
     static let imageSlackLogo = "imageSlackLogo"
+    static let spendbaseLogoWhite = "spendbaseLogo"
+    static let mastercardLogo = "mastercardLogo"
 }
 
 // MARK: - Tab Bar Icons
