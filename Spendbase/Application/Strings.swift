@@ -18,6 +18,13 @@ struct K {
     static let accountTitle = "Account"
 }
 
+struct Placeholders {
+    static let companyName = "Google"
+    static let cardNumberShort = "0129"
+    static let cardNumberWIthDots = "•• 2911"
+    static let amount = "$34"
+}
+
 struct TabBarTitles {
     static let itemOne = "Home"
     static let itemTwo = "Transactions"

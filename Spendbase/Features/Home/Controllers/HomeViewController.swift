@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     var sampleCard1: Card!
     var sampleCard2: Card!
     var sampleCard3: Card!
-
         
     //MARK: - View Initialization
     var headerView: HeaderView?
@@ -34,6 +33,7 @@ class HomeViewController: UIViewController {
         
         loadSampleData()
         setupTableView()
+        setupCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,33 +43,3 @@ class HomeViewController: UIViewController {
     }
 }
 
-//MARK: - UITableViewDataSource, UITableViewDelegate
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    func setupTableView() {
-        mainView.myCardsTableView.delegate = self
-        mainView.myCardsTableView.dataSource = self
-        mainView.myCardsTableView.register(MyCardCell.self, forCellReuseIdentifier: "MyCardCellIdentifier")
-        mainView.myCardsTableView.separatorStyle = .none
-        mainView.myCardsTableView.isScrollEnabled = false
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCardCellIdentifier", for: indexPath) as! MyCardCell
-        
-        cell.selectionStyle = .none
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 64
-    }
-}

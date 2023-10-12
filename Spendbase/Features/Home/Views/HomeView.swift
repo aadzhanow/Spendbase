@@ -85,12 +85,20 @@ class HomeView: UIView {
         return button
     }()
     
-    let recentTransactionsTableView: UITableView = {
-        let tv = UITableView()
-        tv.backgroundColor = .blue
-        return tv
+    let recentTransactionsFlowLayout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 10
+        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width, height: 63)
+        return layout
     }()
-    
+
+    lazy var recentTransactionsCollectionView: UICollectionView = {
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: recentTransactionsFlowLayout)
+        cv.backgroundColor = UIColor(named: BrandColors.backgroundTwo)
+        return cv
+    }()
     
     // MARK: - Initializers
     override init(frame: CGRect) {
@@ -125,7 +133,7 @@ class HomeView: UIView {
         addSubview(containerTransactionsTableView)
         containerTransactionsTableView.addSubview(recentTransactionsLabel)
         containerTransactionsTableView.addSubview(seeTransactionsButton)
-        addSubview(recentTransactionsTableView)
+        addSubview(recentTransactionsCollectionView)
         
         // MARK: - Layout & Constraints
         
@@ -159,7 +167,7 @@ class HomeView: UIView {
             make.top.equalTo(self.availableBalanceView.snp.bottom).offset(16)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
-            make.height.equalTo(250)
+            make.height.equalTo(240)
         }
         
         myCardsLabel.snp.makeConstraints { make in
@@ -186,7 +194,7 @@ class HomeView: UIView {
             make.top.equalTo(self.containerMyCardsTableView.snp.bottom).offset(16)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
-            make.height.equalTo(250)
+            make.height.equalTo(240)
         }
         
         recentTransactionsLabel.snp.makeConstraints { make in
@@ -201,11 +209,11 @@ class HomeView: UIView {
             make.height.equalTo(20)
         }
         
-        recentTransactionsTableView.snp.makeConstraints { make in
+        recentTransactionsCollectionView.snp.makeConstraints { make in
             make.top.equalTo(self.recentTransactionsLabel.snp.bottom).offset(8)
             make.leading.equalTo(self.containerTransactionsTableView.snp.leading).offset(0)
             make.trailing.equalTo(self.containerTransactionsTableView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerTransactionsTableView.snp.bottom).offset(0)
+            make.bottom.equalTo(self.containerTransactionsTableView.snp.bottom).offset(-16)
         }
         
     }

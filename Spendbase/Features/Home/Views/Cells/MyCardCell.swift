@@ -10,6 +10,7 @@ import SnapKit
 
 class MyCardCell: UITableViewCell {
     
+    // MARK: - UI Properties
     let containerView: UIView = {
         let view = UIView()
         return view
@@ -27,7 +28,7 @@ class MyCardCell: UITableViewCell {
     
     let cardNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "1234"
+        label.text = Placeholders.cardNumberShort
         label.textColor = UIColor(named: BrandColors.backgroundTwo)
         label.font = UIFont(name: Fonts.interSemiBold, size: 10)
         return label
@@ -49,7 +50,7 @@ class MyCardCell: UITableViewCell {
     
     let cardNameLabel: StyledLabel = {
         let label = StyledLabel(textStyle: .labelLarge)
-        label.text = "Google"
+        label.text = Placeholders.companyName
         return label
     }()
     
@@ -59,6 +60,7 @@ class MyCardCell: UITableViewCell {
         return imageView
     }()
     
+    // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
@@ -68,17 +70,15 @@ class MyCardCell: UITableViewCell {
         super.init(coder: coder)
         setupViews()
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Private Methods
     private func setupViews() {
         
+        // MARK: - View hierarchy setup
         addSubview(containerView)
         containerView.addSubview(cardImage)
         containerView.addSubview(bgServiceLogoImage)
@@ -87,6 +87,7 @@ class MyCardCell: UITableViewCell {
         containerView.addSubview(cardNameLabel)
         containerView.addSubview(chevronRightIcon)
         
+        // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
             make.top.bottom.leading.trailing.equalToSuperview()
         }

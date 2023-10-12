@@ -31,11 +31,11 @@ extension HomeViewController {
         let transaction2Card3 = Transaction(card: card3, name: "Gas Station", icon: "gasIcon", date: Date(), type: .debit, status: .completed, amount: 30.00, receiptAvailability: true)
         let transaction3Card3 = Transaction(card: card3, name: "Movie Tickets", icon: "movieIcon", date: Date(), type: .debit, status: .completed, amount: 20.00, receiptAvailability: false)
 
-//        // Arrays for easy access
-//        let cards = [card1, card2, card3]
-//        let transactionsCard1 = [transaction1Card1, transaction2Card1, transaction3Card1]
-//        let transactionsCard2 = [transaction1Card2, transaction2Card2, transaction3Card2]
-//        let transactionsCard3 = [transaction1Card3, transaction2Card3, transaction3Card3]
+        // Arrays for easy access
+        let cards = [card1, card2, card3]
+        let transactionsCard1 = [transaction1Card1, transaction2Card1, transaction3Card1]
+        let transactionsCard2 = [transaction1Card2, transaction2Card2, transaction3Card2]
+        let transactionsCard3 = [transaction1Card3, transaction2Card3, transaction3Card3]
     }
     
 }
