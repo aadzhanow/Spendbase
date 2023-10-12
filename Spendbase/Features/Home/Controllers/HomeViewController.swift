@@ -8,8 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+        
     //MARK: - View Initialization
+    var headerView: HeaderView?
+
     var mainView: HomeView {
         return view as! HomeView
     }
@@ -21,5 +23,14 @@ class HomeViewController: UIViewController {
     //MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        headerView = view.addHeaderView()
+        headerView?.setTitle(K.moneyTitle)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 }

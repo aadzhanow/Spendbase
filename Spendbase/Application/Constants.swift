@@ -13,9 +13,11 @@ struct BrandColors {
     static let layerOne = "layerOne"
     static let layerTwo = "layerTwo"
     static let layerThree = "layerThree"
+    static let layerFour = "layerFour"
     static let systemOne = "systemOne"
     static let systemTwo = "systemTwo"
     static let systemThree = "systemThree"
+    static let systemFour = "systemFour"
 }
 
 // MARK: - Icon for UI

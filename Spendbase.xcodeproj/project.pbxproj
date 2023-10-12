@@ -31,6 +31,15 @@
 		7492C0C92AD6EE870007EB73 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0C82AD6EE870007EB73 /* StyledLabel.swift */; };
 		7492C0CB2AD7031F0007EB73 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0CA2AD7031F0007EB73 /* UnderlinedButton.swift */; };
 		7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0CC2AD709A80007EB73 /* ContainerView.swift */; };
+		7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0DC2AD714C70007EB73 /* TransactionsView.swift */; };
+		7492C0DF2AD714E00007EB73 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0DE2AD714E00007EB73 /* TransactionsViewController.swift */; };
+		7492C0E12AD714FE0007EB73 /* MyCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0E02AD714FE0007EB73 /* MyCardsViewController.swift */; };
+		7492C0E52AD715260007EB73 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0E42AD715260007EB73 /* AccountViewController.swift */; };
+		7492C0E72AD715470007EB73 /* MyCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0E62AD715470007EB73 /* MyCardsView.swift */; };
+		7492C0E92AD715570007EB73 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0E82AD715570007EB73 /* AccountView.swift */; };
+		7492C0EB2AD717780007EB73 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0EA2AD717780007EB73 /* TabBarViewController.swift */; };
+		7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0EE2AD7352B0007EB73 /* HeaderView.swift */; };
+		7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +67,15 @@
 		7492C0C82AD6EE870007EB73 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		7492C0CA2AD7031F0007EB73 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
 		7492C0CC2AD709A80007EB73 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		7492C0DC2AD714C70007EB73 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		7492C0DE2AD714E00007EB73 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		7492C0E02AD714FE0007EB73 /* MyCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsViewController.swift; sourceTree = "<group>"; };
+		7492C0E42AD715260007EB73 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		7492C0E62AD715470007EB73 /* MyCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsView.swift; sourceTree = "<group>"; };
+		7492C0E82AD715570007EB73 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		7492C0EA2AD717780007EB73 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		7492C0EE2AD7352B0007EB73 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HeaderView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +120,8 @@
 		7492C0972AD6BB0E0007EB73 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0832AD6B69A0007EB73 /* AppDelegate.swift */,
 				7492C0982AD6BB480007EB73 /* Common */,
+				7492C0832AD6B69A0007EB73 /* AppDelegate.swift */,
 				7492C0A42AD6BFC70007EB73 /* Constants.swift */,
 				7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */,
 				7492C0AB2AD6DE960007EB73 /* Strings.swift */,
@@ -124,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7492C0C42AD6E99F0007EB73 /* UIFont+CustomFonts.swift */,
+				7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,7 +160,13 @@
 		7492C09B2AD6BB6B0007EB73 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				7492C09D2AD6BBE50007EB73 /* HomeScreen */,
+				7492C0EC2AD735060007EB73 /* Header */,
+				7492C09D2AD6BBE50007EB73 /* Home */,
+				7492C0D42AD713D00007EB73 /* Transactions */,
+				7492C0D32AD713BA0007EB73 /* MyCards */,
+				7492C0D52AD713E20007EB73 /* Account */,
+				7492C0D22AD710930007EB73 /* SingleCard */,
+				7492C0CE2AD70F730007EB73 /* TabBar */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -149,15 +174,15 @@
 		7492C09C2AD6BB790007EB73 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0AD2AD6E7C50007EB73 /* Fonts */,
 				7492C08C2AD6B69B0007EB73 /* Assets.xcassets */,
-				7492C08E2AD6B69B0007EB73 /* LaunchScreen.storyboard */,
+				7492C0AD2AD6E7C50007EB73 /* Fonts */,
 				7492C0912AD6B69B0007EB73 /* Info.plist */,
+				7492C08E2AD6B69B0007EB73 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7492C09D2AD6BBE50007EB73 /* HomeScreen */ = {
+		7492C09D2AD6BBE50007EB73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				7492C0A12AD6BC8A0007EB73 /* Extensions */,
@@ -165,7 +190,7 @@
 				7492C09F2AD6BC010007EB73 /* Views */,
 				7492C09E2AD6BBF70007EB73 /* Controllers */,
 			);
-			path = HomeScreen;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		7492C09E2AD6BBF70007EB73 /* Controllers */ = {
@@ -229,6 +254,136 @@
 				7492C0C22AD6E84E0007EB73 /* SF-Pro-Text-Regular.otf */,
 			);
 			path = "SF-Pro";
+			sourceTree = "<group>";
+		};
+		7492C0CE2AD70F730007EB73 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0CF2AD70F930007EB73 /* Controllers */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		7492C0CF2AD70F930007EB73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0EA2AD717780007EB73 /* TabBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7492C0D22AD710930007EB73 /* SingleCard */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0D92AD7143B0007EB73 /* Views */,
+				7492C0D82AD714350007EB73 /* Contollers */,
+			);
+			path = SingleCard;
+			sourceTree = "<group>";
+		};
+		7492C0D32AD713BA0007EB73 /* MyCards */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0D62AD714220007EB73 /* Views */,
+				7492C0D72AD7142A0007EB73 /* Controllers */,
+			);
+			path = MyCards;
+			sourceTree = "<group>";
+		};
+		7492C0D42AD713D00007EB73 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0DB2AD7144C0007EB73 /* Views */,
+				7492C0DA2AD714420007EB73 /* Controllers */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		7492C0D52AD713E20007EB73 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0E32AD7150E0007EB73 /* Views */,
+				7492C0E22AD715050007EB73 /* Controllers */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		7492C0D62AD714220007EB73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0E62AD715470007EB73 /* MyCardsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7492C0D72AD7142A0007EB73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0E02AD714FE0007EB73 /* MyCardsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7492C0D82AD714350007EB73 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
+		7492C0D92AD7143B0007EB73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7492C0DA2AD714420007EB73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0DE2AD714E00007EB73 /* TransactionsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7492C0DB2AD7144C0007EB73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0DC2AD714C70007EB73 /* TransactionsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7492C0E22AD715050007EB73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0E42AD715260007EB73 /* AccountViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7492C0E32AD7150E0007EB73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0E82AD715570007EB73 /* AccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7492C0EC2AD735060007EB73 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0ED2AD735130007EB73 /* Views */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		7492C0ED2AD735130007EB73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0EE2AD7352B0007EB73 /* HeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,12 +474,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7492C0A52AD6BFC70007EB73 /* Constants.swift in Sources */,
+				7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */,
+				7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */,
 				7492C0882AD6B69A0007EB73 /* HomeViewController.swift in Sources */,
+				7492C0E92AD715570007EB73 /* AccountView.swift in Sources */,
 				7492C0A32AD6BD930007EB73 /* HomeView.swift in Sources */,
+				7492C0E12AD714FE0007EB73 /* MyCardsViewController.swift in Sources */,
 				7492C0842AD6B69A0007EB73 /* AppDelegate.swift in Sources */,
+				7492C0DF2AD714E00007EB73 /* TransactionsViewController.swift in Sources */,
+				7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */,
 				7492C0C92AD6EE870007EB73 /* StyledLabel.swift in Sources */,
+				7492C0EB2AD717780007EB73 /* TabBarViewController.swift in Sources */,
 				7492C0CB2AD7031F0007EB73 /* UnderlinedButton.swift in Sources */,
+				7492C0E72AD715470007EB73 /* MyCardsView.swift in Sources */,
 				7492C0C52AD6E99F0007EB73 /* UIFont+CustomFonts.swift in Sources */,
+				7492C0E52AD715260007EB73 /* AccountViewController.swift in Sources */,
 				7492C0AC2AD6DE960007EB73 /* Strings.swift in Sources */,
 				7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */,
 				7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */,
@@ -476,8 +640,7 @@
 				INFOPLIST_FILE = Spendbase/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,8 +667,7 @@
 				INFOPLIST_FILE = Spendbase/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

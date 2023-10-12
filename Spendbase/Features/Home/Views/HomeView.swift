@@ -11,7 +11,6 @@ import SnapKit
 class HomeView: UIView {
     
     // MARK: - UI Properties
-    
     let availableBalanceView: ContainerView = {
         let view = ContainerView()
         return view
@@ -129,7 +128,7 @@ class HomeView: UIView {
         
         // Available Balance View
         availableBalanceView.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(24)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(89)
             make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
             make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
             make.bottom.equalTo(self.currentBalanceLabel.snp.bottom).offset(16)
