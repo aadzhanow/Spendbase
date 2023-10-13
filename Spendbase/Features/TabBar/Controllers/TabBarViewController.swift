@@ -18,12 +18,12 @@ class TabBarViewController: UITabBarController {
     
     // MARK: - Tab Setup
     private func setupTabs() {
-        let home = self.createNav(with: TabBarTitles.itemOne, and: UIImage(named: TabBarIcons.iconHome), vc: HomeViewController())
-        let transactions = self.createNav(with: TabBarTitles.itemTwo, and: UIImage(named: TabBarIcons.iconList), vc: TransactionsViewController())
-        let myCards = self.createNav(with: TabBarTitles.itemThree, and: UIImage(named: TabBarIcons.iconCreditCard), vc: MyCardsViewController())
-        let account = self.createNav(with: TabBarTitles.itemFour, and: UIImage(named: TabBarIcons.iconUserSquare), vc: AccountViewController())
+        let home = createNav(with: TabBarTitles.itemOne, and: UIImage(named: TabBarIcons.iconHome), vc: HomeViewController())
+        let transactions = createNav(with: TabBarTitles.itemTwo, and: UIImage(named: TabBarIcons.iconList), vc: TransactionsViewController())
+        let myCards = createNav(with: TabBarTitles.itemThree, and: UIImage(named: TabBarIcons.iconCreditCard), vc: MyCardsViewController())
+        let account = createNav(with: TabBarTitles.itemFour, and: UIImage(named: TabBarIcons.iconUserSquare), vc: AccountViewController())
         
-        self.setViewControllers([home, transactions, myCards, account], animated: true)
+        setViewControllers([home, transactions, myCards, account], animated: true)
     }
     
     // MARK: - NavBar Setup
@@ -36,29 +36,8 @@ class TabBarViewController: UITabBarController {
         let firstViewController = nav.viewControllers.first
         firstViewController?.navigationItem.title = title
         
-//        let bankButton = UIBarButtonItem(image: UIImage(named: IconUI.iconBank)?.withRenderingMode(.alwaysOriginal),
-//                                         style: .plain,
-//                                         target: self,
-//                                         action: #selector(bankButtonTapped))
-//        bankButton.tintColor = .black
-//        
-//        let plusButton = UIBarButtonItem(image: UIImage(named: IconUI.iconPlus)?.withRenderingMode(.alwaysOriginal),
-//                                        style: .plain,
-//                                        target: self,
-//                                        action: #selector(plusButtonTapped))
-//        plusButton.tintColor = .black
-//        
-//        firstViewController?.navigationItem.rightBarButtonItems = [bankButton, plusButton]
-        
         return nav
     }
-
-//    // MARK: - Nav Bar Button Action
-//    @objc func plusButtonTapped() {
-//    }
-//
-//    @objc func bankButtonTapped() {
-//    }
 
     // MARK: - Appearance Setup
     private func setupTabBarAppearance() {

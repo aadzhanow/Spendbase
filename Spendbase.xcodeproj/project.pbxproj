@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		743F7DFE2AD97DBF0053DAB7 /* AvailableServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */; };
+		743F7E002AD97DD50053DAB7 /* TransactionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */; };
+		743F7E022AD97E050053DAB7 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E012AD97E050053DAB7 /* TransactionStatus.swift */; };
+		743F7E042AD97E220053DAB7 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E032AD97E220053DAB7 /* TransactionType.swift */; };
 		7492C0842AD6B69A0007EB73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0832AD6B69A0007EB73 /* AppDelegate.swift */; };
 		7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */; };
 		7492C0882AD6B69A0007EB73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0872AD6B69A0007EB73 /* HomeViewController.swift */; };
@@ -40,7 +44,6 @@
 		7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0EE2AD7352B0007EB73 /* HeaderView.swift */; };
 		7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */; };
 		7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F42AD7DEBC0007EB73 /* CardModels.swift */; };
-		7492C0F72AD7E3600007EB73 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F62AD7E3600007EB73 /* SampleData.swift */; };
 		7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */; };
 		7492C0FC2AD805CA0007EB73 /* HomeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */; };
 		7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */; };
@@ -69,6 +72,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServices.swift; sourceTree = "<group>"; };
+		743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModels.swift; sourceTree = "<group>"; };
+		743F7E012AD97E050053DAB7 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
+		743F7E032AD97E220053DAB7 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		7492C0802AD6B69A0007EB73 /* Spendbase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendbase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7492C0832AD6B69A0007EB73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +110,6 @@
 		7492C0EE2AD7352B0007EB73 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HeaderView.swift"; sourceTree = "<group>"; };
 		7492C0F42AD7DEBC0007EB73 /* CardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModels.swift; sourceTree = "<group>"; };
-		7492C0F62AD7E3600007EB73 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
 		7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionCell.swift; sourceTree = "<group>"; };
@@ -130,6 +136,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		743F7DFB2AD97D020053DAB7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7492C0A42AD6BFC70007EB73 /* Constants.swift */,
+				7492C0AB2AD6DE960007EB73 /* Strings.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		743F7DFC2AD97D980053DAB7 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */,
+				743F7E012AD97E050053DAB7 /* TransactionStatus.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
 		7492C0772AD6B69A0007EB73 = {
 			isa = PBXGroup;
 			children = (
@@ -160,10 +184,9 @@
 		7492C0972AD6BB0E0007EB73 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				743F7DFB2AD97D020053DAB7 /* Core */,
 				7492C0832AD6B69A0007EB73 /* AppDelegate.swift */,
-				7492C0A42AD6BFC70007EB73 /* Constants.swift */,
 				7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */,
-				7492C0AB2AD6DE960007EB73 /* Strings.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -224,6 +247,7 @@
 		7492C09D2AD6BBE50007EB73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				743F7DFC2AD97D980053DAB7 /* Enumerations */,
 				7492C0A12AD6BC8A0007EB73 /* Extensions */,
 				7492C0A02AD6BC850007EB73 /* Models */,
 				7492C09F2AD6BC010007EB73 /* Views */,
@@ -253,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				7492C0F42AD7DEBC0007EB73 /* CardModels.swift */,
+				743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,9 +285,9 @@
 		7492C0A12AD6BC8A0007EB73 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0F62AD7E3600007EB73 /* SampleData.swift */,
 				7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */,
 				7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */,
+				743F7E032AD97E220053DAB7 /* TransactionType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,17 +448,9 @@
 		7492C0EC2AD735060007EB73 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0ED2AD735130007EB73 /* Views */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
-		7492C0ED2AD735130007EB73 /* Views */ = {
-			isa = PBXGroup;
-			children = (
 				7492C0EE2AD7352B0007EB73 /* HeaderView.swift */,
 			);
-			path = Views;
+			path = Header;
 			sourceTree = "<group>";
 		};
 		7492C0F82AD7E6950007EB73 /* Cells */ = {
@@ -576,7 +593,6 @@
 			files = (
 				7492C0A52AD6BFC70007EB73 /* Constants.swift in Sources */,
 				7492C1042AD8174B0007EB73 /* HomeViewController+UICollectionView.swift in Sources */,
-				7492C0F72AD7E3600007EB73 /* SampleData.swift in Sources */,
 				7492C1112AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift in Sources */,
 				7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */,
 				7492C0FC2AD805CA0007EB73 /* HomeViewController+UITableView.swift in Sources */,
@@ -591,6 +607,7 @@
 				7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */,
 				7492C0C92AD6EE870007EB73 /* StyledLabel.swift in Sources */,
 				7492C0EB2AD717780007EB73 /* TabBarViewController.swift in Sources */,
+				743F7E022AD97E050053DAB7 /* TransactionStatus.swift in Sources */,
 				7492C0CB2AD7031F0007EB73 /* UnderlinedButton.swift in Sources */,
 				7492C0E72AD715470007EB73 /* MyCardsView.swift in Sources */,
 				7492C0C52AD6E99F0007EB73 /* UIFont+CustomFonts.swift in Sources */,
@@ -599,12 +616,15 @@
 				7492C10E2AD8511E0007EB73 /* ButtonModel.swift in Sources */,
 				7492C10B2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift in Sources */,
 				7492C1152AD879CD0007EB73 /* TableViewSectionHeader.swift in Sources */,
+				743F7E002AD97DD50053DAB7 /* TransactionModels.swift in Sources */,
 				7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */,
 				7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */,
+				743F7E042AD97E220053DAB7 /* TransactionType.swift in Sources */,
 				7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */,
 				7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */,
 				7492C1082AD81B510007EB73 /* SingleCardViewController.swift in Sources */,
 				7492C1062AD81B3B0007EB73 /* SingleCardView.swift in Sources */,
+				743F7DFE2AD97DBF0053DAB7 /* AvailableServices.swift in Sources */,
 				7492C1172AD896900007EB73 /* SingleCardViewController+UITableView.swift in Sources */,
 				7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */,
 			);
