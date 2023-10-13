@@ -67,38 +67,36 @@ class HeaderView: UIView {
         addSubview(dividerView)
         
         containerView.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(12)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(12)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-20)
             make.height.equalTo(53)
-
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerView.snp.top).offset(1)
-            make.leading.equalTo(self.containerView.snp.leading).offset(0)
+            make.top.equalTo(containerView.snp.top).offset(1)
+            make.leading.equalTo(containerView.snp.leading).offset(0)
         }
         
         bankButton.snp.makeConstraints { make in
-            make.width.height.equalTo(44)
-            make.top.equalTo(self.containerView.snp.top).offset(0)
-            make.trailing.equalTo(self.containerView.snp.trailing).offset(0)
+            make.top.equalTo(containerView.snp.top).offset(0)
+            make.trailing.equalTo(containerView.snp.trailing).offset(0)
+            make.size.equalTo(44)
         }
         
         plusButton.snp.makeConstraints { make in
-            make.width.height.equalTo(44)
-            make.top.equalTo(self.containerView.snp.top).offset(0)
-            make.trailing.equalTo(self.bankButton.snp.leading).offset(0)
+            make.top.equalTo(containerView.snp.top).offset(0)
+            make.trailing.equalTo(bankButton.snp.leading).offset(0)
+            make.size.equalTo(44)
         }
         
         dividerView.snp.makeConstraints { make in
             make.height.equalTo(1)
-            make.leading.equalTo(self.containerView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerView.snp.bottom).offset(0)
+            make.leading.equalTo(containerView.snp.leading).offset(0)
+            make.trailing.equalTo(containerView.snp.trailing).offset(0)
+            make.bottom.equalTo(containerView.snp.bottom).offset(0)
         }
     }
-
     
     func setTitle(_ title: String) {
         titleLabel.text = title

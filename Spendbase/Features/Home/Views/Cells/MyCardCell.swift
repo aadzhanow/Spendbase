@@ -90,42 +90,41 @@ class MyCardCell: UITableViewCell {
         
         // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         bgServiceLogoImage.snp.makeConstraints { make in
-            make.top.equalTo(self.containerView.snp.top).offset(4)
-            make.leading.equalTo(self.containerView.snp.leading).offset(8)
-            make.width.height.equalTo(28)
+            make.top.equalTo(containerView.snp.top).offset(4)
+            make.leading.equalTo(containerView.snp.leading).offset(8)
+            make.size.equalTo(28)
         }
         
         serviceLogoImage.snp.makeConstraints { make in
-            make.centerX.equalTo(self.bgServiceLogoImage.snp.centerX)
-            make.centerY.equalTo(self.bgServiceLogoImage.snp.centerY)
-            make.width.height.equalTo(16.79)
+            make.center.equalTo(bgServiceLogoImage)
+            make.size.equalTo(16.79)
         }
         
         cardImage.snp.makeConstraints { make in
-            make.top.equalTo(self.containerView.snp.top).offset(16)
-            make.leading.equalTo(self.containerView.snp.leading).offset(16)
+            make.top.equalTo(containerView.snp.top).offset(16)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
             make.width.equalTo(48)
             make.height.equalTo(32)
         }
         
         cardNumberLabel.snp.makeConstraints { make in
-            make.trailing.equalTo(self.cardImage.snp.trailing).offset(-7)
-            make.bottom.equalTo(self.cardImage.snp.bottom).offset(-7)
+            make.trailing.equalTo(cardImage.snp.trailing).offset(-7)
+            make.bottom.equalTo(cardImage.snp.bottom).offset(-7)
         }
         
         cardNameLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(self.containerView.snp.centerY)
-            make.leading.equalTo(self.cardImage.snp.trailing).offset(12)
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.leading.equalTo(cardImage.snp.trailing).offset(12)
         }
         
         chevronRightIcon.snp.makeConstraints { make in
-            make.centerY.equalTo(self.containerView.snp.centerY)
-            make.leading.equalTo(self.containerView.snp.trailing).offset(-46)
-            make.width.height.equalTo(32)
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.leading.equalTo(containerView.snp.trailing).offset(-46)
+            make.size.equalTo(32)
         }
     }
 }

@@ -69,16 +69,15 @@ class ButtonsCollectionViewCell: UICollectionViewCell {
         
         // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         buttonStackView.snp.makeConstraints { make in
-            make.centerX.equalTo(self.containerView.snp.centerX)
-            make.centerY.equalTo(self.containerView.snp.centerY)
+            make.center.equalTo(containerView)
         }
         
         buttonIcon.snp.makeConstraints { make in
-            make.width.height.equalTo(24)
+            make.size.equalTo(24)
         }
     }
 }

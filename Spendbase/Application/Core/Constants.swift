@@ -74,9 +74,17 @@ struct Fonts {
     static let interSemiBold = "Inter-SemiBold"
 }
 
+// MARK: - Layout Constants
 struct Cells {
     static let myCardCell = "MyCardCellIdentifier"
     static let transactionCell = "TransactionCollectionCellIdentifier"
     static let buttonsCell = "ButtonsCollectionViewCellIdentifier"
     static let activityCell = "ActivityTableViewCellIdentifier"
+}
+
+// MARK: - Layout Constants
+struct LayoutConstants {
+    static let collectionViewTotalWidth = 256.0
+    static let collectionViewCellHeight = 70.0
+    static let collectionViewNumberOfCells = 3.0
 }

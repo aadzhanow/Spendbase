@@ -11,11 +11,7 @@ import SnapKit
 class HomeView: UIView {
     
     // MARK: - UI Properties
-    let availableBalanceView: ContainerView = {
-        let view = ContainerView()
-        return view
-    }()
-    
+    let availableBalanceView = ContainerView()
     let availableBalanceHorizontalStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -44,10 +40,7 @@ class HomeView: UIView {
     }()
     
     // My Cards Table View
-    let containerMyCardsTableView: ContainerView = {
-        let view = ContainerView()
-        return view
-    }()
+    let containerMyCardsTableView = ContainerView()
     
     let myCardsLabel: StyledLabel = {
         let label = StyledLabel(textStyle: .titleMedium)
@@ -68,10 +61,7 @@ class HomeView: UIView {
     }()
     
     // Recent Transactions Table View
-    let containerTransactionsCollectionView: ContainerView = {
-        let view = ContainerView()
-        return view
-    }()
+    let containerTransactionsCollectionView = ContainerView()
     
     let recentTransactionsLabel: StyledLabel = {
         let label = StyledLabel(textStyle: .titleMedium)
@@ -139,16 +129,15 @@ class HomeView: UIView {
         
         // Available Balance View
         availableBalanceView.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(89)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
-            make.bottom.equalTo(self.currentBalanceLabel.snp.bottom).offset(16)
+            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(89)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.bottom.equalTo(currentBalanceLabel.snp.bottom).offset(16)
         }
         
         availableBalanceHorizontalStack.snp.makeConstraints { make in
-            make.top.equalTo(self.availableBalanceView.snp.top).offset(20)
-            make.leading.equalTo(self.availableBalanceView.snp.leading).offset(16)
-            make.trailing.equalTo(self.availableBalanceView.snp.trailing).offset(-16)
+            make.top.equalTo(availableBalanceView.snp.top).offset(20)
+            make.leading.trailing.equalTo(availableBalanceView).inset(16)
         }
         
         accountCurrencyImageView.snp.makeConstraints { make in
@@ -157,64 +146,58 @@ class HomeView: UIView {
         }
         
         currentBalanceLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.availableBalanceHorizontalStack.snp.bottom).offset(8)
-            make.leading.equalTo(self.availableBalanceView.snp.leading).offset(16)
-            make.trailing.equalTo(self.availableBalanceView.snp.trailing).offset(-16)
+            make.top.equalTo(availableBalanceHorizontalStack.snp.bottom).offset(8)
+            make.leading.trailing.equalTo(availableBalanceView).inset(16)
         }
         
         // My Cards View
         containerMyCardsTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.availableBalanceView.snp.bottom).offset(16)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.top.equalTo(availableBalanceView.snp.bottom).offset(16)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-20)
             make.height.equalTo(240)
         }
         
         myCardsLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
-            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(16)
+            make.top.leading.equalTo(containerMyCardsTableView).offset(16)
         }
         
         seeAllCardsButton.snp.makeConstraints { make in
-            make.top.equalTo(self.containerMyCardsTableView.snp.top).offset(16)
-            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(-16)
+            make.top.trailing.equalTo(containerMyCardsTableView).inset(16)
             make.width.equalTo(46)
             make.height.equalTo(20)
         }
         
         myCardsTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.myCardsLabel.snp.bottom).offset(8)
-            make.leading.equalTo(self.containerMyCardsTableView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerMyCardsTableView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerMyCardsTableView.snp.bottom).offset(-16)
+            make.top.equalTo(myCardsLabel.snp.bottom).offset(8)
+            make.leading.equalTo(containerMyCardsTableView.snp.leading)
+            make.trailing.equalTo(containerMyCardsTableView.snp.trailing)
+            make.bottom.equalTo(containerMyCardsTableView.snp.bottom).offset(-16)
         }
         
         // Recent Transactions View Constraints
         containerTransactionsCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(self.containerMyCardsTableView.snp.bottom).offset(16)
-            make.leading.equalTo(self.safeAreaLayoutGuide.snp.leading).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            make.top.equalTo(containerMyCardsTableView.snp.bottom).offset(16)
+            make.leading.equalTo(safeAreaLayoutGuide.snp.leading).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide.snp.trailing).offset(-20)
             make.height.equalTo(240)
         }
         
         recentTransactionsLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerTransactionsCollectionView.snp.top).offset(16)
-            make.leading.equalTo(self.containerTransactionsCollectionView.snp.leading).offset(16)
+            make.top.leading.equalTo(containerTransactionsCollectionView).offset(16)
         }
         
         seeTransactionsButton.snp.makeConstraints { make in
-            make.top.equalTo(self.containerTransactionsCollectionView.snp.top).offset(16)
-            make.trailing.equalTo(self.containerTransactionsCollectionView.snp.trailing).offset(-16)
+            make.top.trailing.equalTo(containerTransactionsCollectionView).inset(16)
             make.width.equalTo(46)
             make.height.equalTo(20)
         }
         
         recentTransactionsCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(self.recentTransactionsLabel.snp.bottom).offset(8)
-            make.leading.equalTo(self.containerTransactionsCollectionView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerTransactionsCollectionView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerTransactionsCollectionView.snp.bottom).offset(-16)
+            make.top.equalTo(recentTransactionsLabel.snp.bottom).offset(8)
+            make.leading.equalTo(containerTransactionsCollectionView.snp.leading)
+            make.trailing.equalTo(containerTransactionsCollectionView.snp.trailing)
+            make.bottom.equalTo(containerTransactionsCollectionView.snp.bottom).offset(-16)
         }
-        
     }
 }

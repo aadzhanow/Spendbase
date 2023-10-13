@@ -104,25 +104,24 @@ class ActivityTableViewCell: UITableViewCell {
         
         // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         bgTransactionIcon.snp.makeConstraints { make in
             make.leading.equalTo(self.containerView.snp.leading).offset(16)
             make.centerY.equalTo(self.containerView.snp.centerY)
-            make.width.height.equalTo(40)
+            make.size.equalTo(40)
         }
         
         transactionIcon.snp.makeConstraints { make in
-            make.centerY.equalTo(self.bgTransactionIcon.snp.centerY)
-            make.centerX.equalTo(self.bgTransactionIcon.snp.centerX)
-            make.width.height.equalTo(24)
+            make.center.equalTo(bgTransactionIcon)
+            make.size.equalTo(24)
         }
         
         transactionIndicator.snp.makeConstraints { make in
             make.trailing.equalTo(self.bgTransactionIcon.snp.trailing).offset(0)
             make.bottom.equalTo(self.bgTransactionIcon.snp.bottom).offset(0)
-            make.width.height.equalTo(12)
+            make.size.equalTo(12)
         }
         
         transactionLabelsStackView.snp.makeConstraints { make in
@@ -133,7 +132,7 @@ class ActivityTableViewCell: UITableViewCell {
         receiptIcon.snp.makeConstraints { make in
             make.trailing.equalTo(self.containerView.snp.trailing).offset(-16)
             make.centerY.equalTo(containerView)
-            make.width.height.equalTo(24)
+            make.size.equalTo(24)
         }
         
         transactionAmoutLabel.snp.makeConstraints { make in

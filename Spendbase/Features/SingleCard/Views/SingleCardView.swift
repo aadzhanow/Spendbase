@@ -125,9 +125,12 @@ class SingleCardView: UIView {
     let buttonsFlowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let totalSpacing = layout.minimumInteritemSpacing * 2
-        let cellWidth = (256 - totalSpacing) / 3
-        layout.itemSize = CGSize(width: cellWidth, height: 70)
+        
+        let totalSpacing = layout.minimumInteritemSpacing * (LayoutConstants.collectionViewNumberOfCells - 1)
+        let cellWidth = (LayoutConstants.collectionViewTotalWidth - totalSpacing) / LayoutConstants.collectionViewNumberOfCells
+        
+        layout.itemSize = CGSize(width: cellWidth, height: LayoutConstants.collectionViewCellHeight)
+        
         return layout
     }()
 
@@ -197,120 +200,116 @@ class SingleCardView: UIView {
         
         // header constraints setup
         headerView.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(0)
-            make.leading.equalTo(self.safeAreaLayoutGuide).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).offset(-20)
+            make.top.equalTo(safeAreaLayoutGuide).offset(0)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
             make.height.equalTo(44)
         }
         
         backButton.snp.makeConstraints { make in
-            make.top.equalTo(self.headerView.snp.top)
-            make.leading.equalTo(self.headerView.snp.leading)
-            make.width.height.equalTo(44)
+            make.top.equalTo(headerView.snp.top)
+            make.leading.equalTo(headerView.snp.leading)
+            make.size.equalTo(44)
         }
         
         titleStackView.snp.makeConstraints { make in
-            make.centerX.equalTo(self.headerView.snp.centerX)
-            make.centerY.equalTo(self.headerView.snp.centerY)
+            make.center.equalTo(headerView)
         }
         
         bgTransactionIcon.snp.makeConstraints { make in
-            make.width.height.equalTo(40)
+            make.size.equalTo(40)
         }
         
         transactionIcon.snp.makeConstraints { make in
-            make.centerX.equalTo(self.bgTransactionIcon.snp.centerX)
-            make.centerY.equalTo(self.bgTransactionIcon.snp.centerY)
-            make.width.height.equalTo(20.7)
+            make.center.equalTo(bgTransactionIcon)
+            make.size.equalTo(20.7)
         }
         
         // card view setup
         containerCardImitationView.snp.makeConstraints { make in
-            make.top.equalTo(self.headerView.snp.bottom).offset(24)
-            make.leading.equalTo(self.safeAreaLayoutGuide).offset(20)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).offset(-20)
+            make.top.equalTo(headerView.snp.bottom).offset(24)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(-20)
             make.height.equalTo(180)
         }
         
         cardImitationView.snp.makeConstraints { make in
-            make.top.equalTo(self.containerCardImitationView.snp.top).offset(0)
-            make.centerX.equalTo(self.containerCardImitationView.snp.centerX)
+            make.top.equalTo(containerCardImitationView.snp.top)
+            make.centerX.equalTo(containerCardImitationView.snp.centerX)
             make.height.equalTo(164)
             make.width.equalTo(256)
         }
         
         shadowImage.snp.makeConstraints { make in
-            make.centerX.equalTo(self.cardImitationView.snp.centerX)
-            make.centerY.equalTo(self.cardImitationView.snp.centerY)
+            make.center.equalTo(cardImitationView)
             make.height.equalTo(164)
             make.width.equalTo(330)
         }
         
         cardIssuerLogoImage.snp.makeConstraints { make in
-            make.top.equalTo(self.cardImitationView.snp.top).offset(24)
-            make.leading.equalTo(self.cardImitationView.snp.leading).offset(16)
+            make.top.equalTo(cardImitationView.snp.top).offset(24)
+            make.leading.equalTo(cardImitationView.snp.leading).offset(16)
             make.height.equalTo(16)
             make.width.equalTo(96)
         }
         
         cardTypeLogoImage.snp.makeConstraints { make in
-            make.top.equalTo(self.cardImitationView.snp.top).offset(16)
-            make.trailing.equalTo(self.cardImitationView.snp.trailing).offset(-16)
+            make.top.equalTo(cardImitationView.snp.top).offset(16)
+            make.trailing.equalTo(cardImitationView.snp.trailing).offset(-16)
             make.height.equalTo(31.64)
             make.width.equalTo(51.17)
         }
         
         cardNumberOnCardLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(self.cardImitationView.snp.bottom).offset(-16)
-            make.leading.equalTo(self.cardImitationView.snp.leading).offset(20)
+            make.bottom.equalTo(cardImitationView.snp.bottom).offset(-16)
+            make.leading.equalTo(cardImitationView.snp.leading).offset(20)
         }
         
         // sliding view
         slidingView.snp.makeConstraints { make in
-            slidingViewTopConstraint = make.top.equalTo(self.headerView.snp.bottom).offset(111).constraint
-            make.leading.equalTo(self.safeAreaLayoutGuide).offset(0)
-            make.trailing.equalTo(self.safeAreaLayoutGuide).offset(0)
-            make.bottom.equalTo(self.safeAreaLayoutGuide).offset(0)
+            slidingViewTopConstraint = make.top.equalTo(headerView.snp.bottom).offset(111).constraint
+            make.leading.equalTo(safeAreaLayoutGuide).offset(0)
+            make.trailing.equalTo(safeAreaLayoutGuide).offset(0)
+            make.bottom.equalTo(safeAreaLayoutGuide).offset(0)
         }
         
         dividerView.snp.makeConstraints { make in
-            make.top.equalTo(self.slidingView.snp.top).offset(0)
-            make.leading.equalTo(self.slidingView.snp.leading).offset(20)
-            make.trailing.equalTo(self.slidingView.snp.trailing).offset(-20)
+            make.top.equalTo(slidingView.snp.top).offset(0)
+            make.leading.equalTo(slidingView.snp.leading).offset(20)
+            make.trailing.equalTo(slidingView.snp.trailing).offset(-20)
             make.height.equalTo(1)
         }
         
         // containerViewCollectionView
         containerViewCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(self.slidingView.snp.top).offset(16)
-            make.centerX.equalTo(self.slidingView.snp.centerX)
+            make.top.equalTo(slidingView.snp.top).offset(16)
+            make.centerX.equalTo(slidingView.snp.centerX)
             make.width.equalTo(256)
             make.height.equalTo(72)
         }
         
         buttonsCollectionView.snp.makeConstraints { make in
-            make.top.leading.trailing.bottom.equalTo(self.containerViewCollectionView)
+            make.top.leading.trailing.bottom.equalTo(containerViewCollectionView)
         }
         
         // table view
         containerViewTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.containerViewCollectionView.snp.bottom).offset(24)
-            make.leading.equalTo(self.slidingView.snp.leading).offset(20)
-            make.trailing.equalTo(self.slidingView.snp.trailing).offset(-20)
-            make.bottom.equalTo(self.slidingView.snp.bottom).offset(-16)
+            make.top.equalTo(containerViewCollectionView.snp.bottom).offset(24)
+            make.leading.equalTo(slidingView.snp.leading).offset(20)
+            make.trailing.equalTo(slidingView.snp.trailing).offset(-20)
+            make.bottom.equalTo(slidingView.snp.bottom).offset(-16)
         }
         
         activityLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerViewTableView.snp.top).offset(16)
-            make.leading.equalTo(self.containerViewTableView.snp.leading).offset(16)
+            make.top.equalTo(containerViewTableView.snp.top).offset(16)
+            make.leading.equalTo(containerViewTableView.snp.leading).offset(16)
         }
         
         activityTableView.snp.makeConstraints { make in
-            make.top.equalTo(self.activityLabel.snp.bottom).offset(8)
-            make.leading.equalTo(self.containerViewTableView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerViewTableView.snp.trailing).offset(0)
-            make.bottom.equalTo(self.containerViewTableView.snp.bottom).offset(-16)
+            make.top.equalTo(activityLabel.snp.bottom).offset(8)
+            make.leading.equalTo(containerViewTableView.snp.leading).offset(0)
+            make.trailing.equalTo(containerViewTableView.snp.trailing).offset(0)
+            make.bottom.equalTo(containerViewTableView.snp.bottom).offset(-16)
         }
-
     }
 }

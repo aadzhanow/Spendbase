@@ -92,19 +92,18 @@ class TransactionCollectionCell: UICollectionViewCell {
         
         // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         bgTransactionIcon.snp.makeConstraints { make in
-            make.centerY.equalTo(self.containerView.snp.centerY)
-            make.leading.equalTo(self.containerView.snp.leading).offset(16)
-            make.width.height.equalTo(40)
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.leading.equalTo(containerView.snp.leading).offset(16)
+            make.size.equalTo(40)
         }
         
         transactionIcon.snp.makeConstraints { make in
-            make.centerX.equalTo(self.bgTransactionIcon.snp.centerX)
-            make.centerY.equalTo(self.bgTransactionIcon.snp.centerY)
-            make.width.height.equalTo(20.7)
+            make.center.equalTo(bgTransactionIcon)
+            make.size.equalTo(20.7)
         }
         
         labelStackView.snp.makeConstraints { make in
@@ -113,15 +112,14 @@ class TransactionCollectionCell: UICollectionViewCell {
         }
         
         receiptAvalabilityIcon.snp.makeConstraints { make in
-            make.centerY.equalTo(self.containerView.snp.centerY)
-            make.trailing.equalTo(self.containerView.snp.trailing).offset(-58)
-            make.width.height.equalTo(24)
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.trailing.equalTo(containerView.snp.trailing).offset(-58)
+            make.size.equalTo(24)
         }
         
         amountLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(self.containerView.snp.centerY)
-            make.trailing.equalTo(self.receiptAvalabilityIcon.snp.leading).offset(-12)
+            make.centerY.equalTo(containerView.snp.centerY)
+            make.trailing.equalTo(receiptAvalabilityIcon.snp.leading).offset(-12)
         }
-        
     }
 }

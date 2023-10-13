@@ -57,25 +57,24 @@ class TableViewSectionHeader: UIView {
         
         // MARK: - Layout & Constraints
         containerView.snp.makeConstraints { make in
-            make.top.bottom.leading.trailing.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
         viewForHeaderDateLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.containerView.snp.top).offset(0)
-            make.leading.equalTo(self.containerView.snp.leading).offset(0)
-            make.trailing.equalTo(self.containerView.snp.trailing).offset(0)
+            make.top.equalTo(containerView.snp.top).offset(0)
+            make.leading.trailing.equalTo(containerView).offset(0)
             make.height.equalTo(28)
         }
         
-        headerDateLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self.viewForHeaderDateLabel.snp.top).offset(0)
-            make.leading.equalTo(self.viewForHeaderDateLabel.snp.leading).offset(16)
+        headerDateLabel.snp.makeConstraints { make in
+            make.top.equalTo(viewForHeaderDateLabel.snp.top).offset(0)
+            make.leading.equalTo(viewForHeaderDateLabel.snp.leading).offset(16)
         }
         
         dividerView.snp.makeConstraints { make in
-            make.leading.equalTo(self.viewForHeaderDateLabel.snp.leading).offset(16)
-            make.trailing.equalTo(self.viewForHeaderDateLabel.snp.trailing).offset(-16)
-            make.bottom.equalTo(self.viewForHeaderDateLabel.snp.bottom).offset(0)
+            make.leading.equalTo(viewForHeaderDateLabel.snp.leading).offset(16)
+            make.trailing.equalTo(viewForHeaderDateLabel.snp.trailing).offset(-16)
+            make.bottom.equalTo(viewForHeaderDateLabel.snp.bottom).offset(0)
             make.height.equalTo(1)
         }
     }
