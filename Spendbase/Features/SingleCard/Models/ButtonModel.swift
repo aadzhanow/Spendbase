@@ -5,10 +5,11 @@
 //  Created by Alisher on 12.10.2023.
 //
 
-import UIKit
+import Foundation
 
 struct ButtonModel {
-    let icon: UIImage?
+    let iconName: String
     let title: String
     let action: () -> Void
 }
+

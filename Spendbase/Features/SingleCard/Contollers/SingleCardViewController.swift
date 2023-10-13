@@ -20,13 +20,13 @@ class SingleCardViewController: UIViewController {
     
     //MARK: - Collection View Buttons
     lazy var buttons: [ButtonModel] = [
-        ButtonModel(icon: UIImage(named: IconUI.iconEye), title: K.buttonTitleDetails, action: {
-            self.toggleSlidingView()
+        ButtonModel(iconName: IconUI.iconEye, title: K.buttonTitleDetails, action: { [weak self] in
+            self?.toggleSlidingView()
         }),
-        ButtonModel(icon: UIImage(named: IconUI.iconLock), title: K.buttonTitleLock, action: {
+        ButtonModel(iconName: IconUI.iconLock, title: K.buttonTitleLock, action: { [weak self] in
             print("Lock card tapped")
         }),
-        ButtonModel(icon: UIImage(named: IconUI.iconCreditCardClose), title: K.buttonTitleTerminate, action: {
+        ButtonModel(iconName: IconUI.iconCreditCardClose, title: K.buttonTitleTerminate, action: { [weak self] in
             print("Card close tapped")
         })
     ]

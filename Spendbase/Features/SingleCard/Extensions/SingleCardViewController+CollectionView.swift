@@ -34,17 +34,19 @@ extension SingleCardViewController: UICollectionViewDataSource, UICollectionView
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.buttonsCell, for: indexPath) as? ButtonsCollectionViewCell else {
             
             print("Error: Unable to dequeue and cast ButtonsCollectionViewCell.")
-
+            
             let fallbackCell = UICollectionViewCell()
             return fallbackCell
         }
 
         let buttonModel = buttons[indexPath.row]
-        cell.buttonIcon.image = buttonModel.icon?.withRenderingMode(.alwaysTemplate)
+
+        cell.buttonIcon.image = UIImage(named: buttonModel.iconName)?.withRenderingMode(.alwaysTemplate)
         cell.buttonTitleLabel.text = buttonModel.title
 
         return cell
     }
+
 
 }
 
