@@ -13,7 +13,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func setupTableView() {
         mainView.myCardsTableView.delegate = self
         mainView.myCardsTableView.dataSource = self
-        mainView.myCardsTableView.register(MyCardCell.self, forCellReuseIdentifier: "MyCardCellIdentifier")
+        mainView.myCardsTableView.register(MyCardCell.self, forCellReuseIdentifier: Cells.myCardCell)
         mainView.myCardsTableView.separatorStyle = .none
         mainView.myCardsTableView.isScrollEnabled = false
     }
@@ -36,9 +36,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCardCellIdentifier", for: indexPath) as! MyCardCell
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.myCardCell, for: indexPath) as? MyCardCell else {
+            
+            print("Error: Unable to dequeue and cast MyCardCell.")
+
+            let fallbackCell = UITableViewCell()
+            fallbackCell.textLabel?.text = K.errorLoading
+            return fallbackCell
+        }
+
         cell.selectionStyle = .none
+
         return cell
     }
     

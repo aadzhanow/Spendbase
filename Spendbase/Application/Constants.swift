@@ -73,3 +73,10 @@ struct Fonts {
     static let interMedium = "Inter-Medium"
     static let interSemiBold = "Inter-SemiBold"
 }
+
+struct Cells {
+    static let myCardCell = "MyCardCellIdentifier"
+    static let transactionCell = "TransactionCollectionCellIdentifier"
+    static let buttonsCell = "ButtonsCollectionViewCellIdentifier"
+    static let activityCell = "ActivityTableViewCellIdentifier"
+}

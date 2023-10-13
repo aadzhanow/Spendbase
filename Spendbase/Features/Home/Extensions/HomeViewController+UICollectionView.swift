@@ -13,7 +13,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func setupCollectionView() {
         mainView.recentTransactionsCollectionView.delegate = self
         mainView.recentTransactionsCollectionView.dataSource = self
-        mainView.recentTransactionsCollectionView.register(TransactionCollectionCell.self, forCellWithReuseIdentifier: "TransactionCollectionCellIdentifier")
+        mainView.recentTransactionsCollectionView.register(TransactionCollectionCell.self, forCellWithReuseIdentifier: Cells.transactionCell)
         mainView.recentTransactionsCollectionView.isScrollEnabled = false
     }
     
@@ -26,7 +26,15 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransactionCollectionCellIdentifier", for: indexPath) as! TransactionCollectionCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.transactionCell, for: indexPath) as? TransactionCollectionCell else {
+            
+            print("Error: Unable to dequeue and cast TransactionCollectionCell.")
+
+            let fallbackCell = UICollectionViewCell()
+            
+            return fallbackCell
+        }
+
         return cell
     }
     

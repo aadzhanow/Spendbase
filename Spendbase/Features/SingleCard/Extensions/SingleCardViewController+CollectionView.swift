@@ -13,7 +13,7 @@ extension SingleCardViewController: UICollectionViewDataSource, UICollectionView
     func setupCollectionView() {
         mainView.buttonsCollectionView.delegate = self
         mainView.buttonsCollectionView.dataSource = self
-        mainView.buttonsCollectionView.register(ButtonsCollectionViewCell.self, forCellWithReuseIdentifier: "ButtonsCollectionViewCellIdentifier")
+        mainView.buttonsCollectionView.register(ButtonsCollectionViewCell.self, forCellWithReuseIdentifier: Cells.buttonsCell)
         mainView.buttonsCollectionView.isScrollEnabled = false
     }
     
@@ -31,13 +31,20 @@ extension SingleCardViewController: UICollectionViewDataSource, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonsCollectionViewCellIdentifier", for: indexPath) as! ButtonsCollectionViewCell
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.buttonsCell, for: indexPath) as? ButtonsCollectionViewCell else {
+            
+            print("Error: Unable to dequeue and cast ButtonsCollectionViewCell.")
+
+            let fallbackCell = UICollectionViewCell()
+            return fallbackCell
+        }
+
         let buttonModel = buttons[indexPath.row]
         cell.buttonIcon.image = buttonModel.icon?.withRenderingMode(.alwaysTemplate)
         cell.buttonTitleLabel.text = buttonModel.title
-        
+
         return cell
     }
+
 }
 

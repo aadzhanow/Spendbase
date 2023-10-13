@@ -14,14 +14,14 @@ extension SingleCardViewController: UITableViewDataSource, UITableViewDelegate {
     func setupTableView() {
         mainView.activityTableView.delegate = self
         mainView.activityTableView.dataSource = self
-        mainView.activityTableView.register(ActivityTableViewCell.self, forCellReuseIdentifier: "ActivityTableViewCellIdentifier")
+        mainView.activityTableView.register(ActivityTableViewCell.self, forCellReuseIdentifier: Cells.activityCell)
         mainView.activityTableView.separatorStyle = .none
+        
         if #available(iOS 15.0, *) {
             mainView.activityTableView.sectionHeaderTopPadding = 0
         } else {
             mainView.activityTableView.contentInset.top = 0
         }
-
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -42,9 +42,17 @@ extension SingleCardViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTableViewCellIdentifier", for: indexPath) as! ActivityTableViewCell
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.activityCell, for: indexPath) as? ActivityTableViewCell else {
+            
+            print("Error: Unable to dequeue and cast ActivityTableViewCell.")
+
+            let fallbackCell = UITableViewCell()
+            fallbackCell.textLabel?.text = K.errorLoading
+            return fallbackCell
+        }
+
         cell.selectionStyle = .none
+
         return cell
     }
     

@@ -20,6 +20,7 @@ struct K {
     static let buttonTitleDetails = "Details"
     static let buttonTitleLock = "Lock"
     static let buttonTitleTerminate = "Terminate"
+    static let errorLoading = "Error loading content."
 }
 
 struct Placeholders {
