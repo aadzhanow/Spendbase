@@ -8,10 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    var sampleCard1: Card!
-    var sampleCard2: Card!
-    var sampleCard3: Card!
         
     //MARK: - View Initialization
     var headerView: HeaderView?

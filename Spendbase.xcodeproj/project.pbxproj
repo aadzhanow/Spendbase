@@ -200,7 +200,6 @@
 		7492C09B2AD6BB6B0007EB73 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0EC2AD735060007EB73 /* Header */,
 				7492C09D2AD6BBE50007EB73 /* Home */,
 				7492C0D42AD713D00007EB73 /* Transactions */,
 				7492C0D32AD713BA0007EB73 /* MyCards */,
@@ -448,6 +447,7 @@
 		7492C0FF2AD80B100007EB73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7492C0EC2AD735060007EB73 /* Header */,
 				7492C1002AD80B180007EB73 /* Cells */,
 			);
 			path = Views;
