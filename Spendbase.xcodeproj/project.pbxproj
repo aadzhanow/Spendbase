@@ -148,6 +148,7 @@
 		743F7DFC2AD97D980053DAB7 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				743F7E032AD97E220053DAB7 /* TransactionType.swift */,
 				743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */,
 				743F7E012AD97E050053DAB7 /* TransactionStatus.swift */,
 			);
@@ -287,7 +288,6 @@
 			children = (
 				7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */,
 				7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */,
-				743F7E032AD97E220053DAB7 /* TransactionType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
