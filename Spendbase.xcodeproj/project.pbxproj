@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		743F7DFE2AD97DBF0053DAB7 /* AvailableServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */; };
-		743F7E002AD97DD50053DAB7 /* TransactionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */; };
-		743F7E022AD97E050053DAB7 /* TransactionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E012AD97E050053DAB7 /* TransactionStatus.swift */; };
-		743F7E042AD97E220053DAB7 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E032AD97E220053DAB7 /* TransactionType.swift */; };
+		743F7E3B2ADEB5C50053DAB7 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 743F7E3A2ADEB5C50053DAB7 /* Localizable.xcstrings */; };
+		743F7E3E2ADEB6EE0053DAB7 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E3D2ADEB6EE0053DAB7 /* String+Localized.swift */; };
+		743F7E412ADEFB5B0053DAB7 /* UINavigationController+GestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743F7E402ADEFB5B0053DAB7 /* UINavigationController+GestureRecognizers.swift */; };
 		7492C0842AD6B69A0007EB73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0832AD6B69A0007EB73 /* AppDelegate.swift */; };
 		7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */; };
 		7492C0882AD6B69A0007EB73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0872AD6B69A0007EB73 /* HomeViewController.swift */; };
@@ -19,7 +18,6 @@
 		7492C0A32AD6BD930007EB73 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0A22AD6BD930007EB73 /* HomeView.swift */; };
 		7492C0A52AD6BFC70007EB73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0A42AD6BFC70007EB73 /* Constants.swift */; };
 		7492C0A82AD6DC170007EB73 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7492C0A72AD6DC170007EB73 /* SnapKit */; };
-		7492C0AC2AD6DE960007EB73 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0AB2AD6DE960007EB73 /* Strings.swift */; };
 		7492C0B72AD6E7D60007EB73 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7492C0AE2AD6E7D50007EB73 /* Inter-Medium.ttf */; };
 		7492C0B82AD6E7D60007EB73 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7492C0AF2AD6E7D60007EB73 /* Inter-SemiBold.ttf */; };
 		7492C0B92AD6E7D60007EB73 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7492C0B02AD6E7D60007EB73 /* Inter-ExtraBold.ttf */; };
@@ -33,7 +31,7 @@
 		7492C0C52AD6E99F0007EB73 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0C42AD6E99F0007EB73 /* UIFont+CustomFonts.swift */; };
 		7492C0C92AD6EE870007EB73 /* StyledLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0C82AD6EE870007EB73 /* StyledLabel.swift */; };
 		7492C0CB2AD7031F0007EB73 /* UnderlinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0CA2AD7031F0007EB73 /* UnderlinedButton.swift */; };
-		7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0CC2AD709A80007EB73 /* ContainerView.swift */; };
+		7492C0CD2AD709A80007EB73 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0CC2AD709A80007EB73 /* RoundedView.swift */; };
 		7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0DC2AD714C70007EB73 /* TransactionsView.swift */; };
 		7492C0DF2AD714E00007EB73 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0DE2AD714E00007EB73 /* TransactionsViewController.swift */; };
 		7492C0E12AD714FE0007EB73 /* MyCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0E02AD714FE0007EB73 /* MyCardsViewController.swift */; };
@@ -43,7 +41,6 @@
 		7492C0EB2AD717780007EB73 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0EA2AD717780007EB73 /* TabBarViewController.swift */; };
 		7492C0EF2AD7352B0007EB73 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0EE2AD7352B0007EB73 /* HeaderView.swift */; };
 		7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */; };
-		7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F42AD7DEBC0007EB73 /* CardModels.swift */; };
 		7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */; };
 		7492C0FC2AD805CA0007EB73 /* HomeViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */; };
 		7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */; };
@@ -72,10 +69,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableServices.swift; sourceTree = "<group>"; };
-		743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModels.swift; sourceTree = "<group>"; };
-		743F7E012AD97E050053DAB7 /* TransactionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatus.swift; sourceTree = "<group>"; };
-		743F7E032AD97E220053DAB7 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		743F7E3A2ADEB5C50053DAB7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		743F7E3D2ADEB6EE0053DAB7 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		743F7E402ADEFB5B0053DAB7 /* UINavigationController+GestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+GestureRecognizers.swift"; sourceTree = "<group>"; };
 		7492C0802AD6B69A0007EB73 /* Spendbase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spendbase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7492C0832AD6B69A0007EB73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 		7492C0912AD6B69B0007EB73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7492C0A22AD6BD930007EB73 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7492C0A42AD6BFC70007EB73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		7492C0AB2AD6DE960007EB73 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7492C0AE2AD6E7D50007EB73 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		7492C0AF2AD6E7D60007EB73 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		7492C0B02AD6E7D60007EB73 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -99,7 +94,7 @@
 		7492C0C42AD6E99F0007EB73 /* UIFont+CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CustomFonts.swift"; sourceTree = "<group>"; };
 		7492C0C82AD6EE870007EB73 /* StyledLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLabel.swift; sourceTree = "<group>"; };
 		7492C0CA2AD7031F0007EB73 /* UnderlinedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedButton.swift; sourceTree = "<group>"; };
-		7492C0CC2AD709A80007EB73 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		7492C0CC2AD709A80007EB73 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		7492C0DC2AD714C70007EB73 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		7492C0DE2AD714E00007EB73 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		7492C0E02AD714FE0007EB73 /* MyCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardsViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +104,6 @@
 		7492C0EA2AD717780007EB73 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		7492C0EE2AD7352B0007EB73 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HeaderView.swift"; sourceTree = "<group>"; };
-		7492C0F42AD7DEBC0007EB73 /* CardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModels.swift; sourceTree = "<group>"; };
 		7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
 		7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+UITableView.swift"; sourceTree = "<group>"; };
 		7492C1012AD80B4B0007EB73 /* TransactionCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCollectionCell.swift; sourceTree = "<group>"; };
@@ -136,23 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		743F7DFB2AD97D020053DAB7 /* Core */ = {
+		743F7E392ADEB3230053DAB7 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				7492C0AD2AD6E7C50007EB73 /* Fonts */,
 				7492C0A42AD6BFC70007EB73 /* Constants.swift */,
-				7492C0AB2AD6DE960007EB73 /* Strings.swift */,
+				743F7E3A2ADEB5C50053DAB7 /* Localizable.xcstrings */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		743F7DFC2AD97D980053DAB7 /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				743F7E032AD97E220053DAB7 /* TransactionType.swift */,
-				743F7DFD2AD97DBF0053DAB7 /* AvailableServices.swift */,
-				743F7E012AD97E050053DAB7 /* TransactionStatus.swift */,
-			);
-			path = Enumerations;
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		7492C0772AD6B69A0007EB73 = {
@@ -175,8 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				7492C0972AD6BB0E0007EB73 /* Application */,
-				7492C09B2AD6BB6B0007EB73 /* Features */,
+				7492C09B2AD6BB6B0007EB73 /* Flow */,
 				7492C0982AD6BB480007EB73 /* Common */,
+				743F7E392ADEB3230053DAB7 /* Supporting */,
 				7492C09C2AD6BB790007EB73 /* Resources */,
 			);
 			path = Spendbase;
@@ -185,7 +171,6 @@
 		7492C0972AD6BB0E0007EB73 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				743F7DFB2AD97D020053DAB7 /* Core */,
 				7492C0832AD6B69A0007EB73 /* AppDelegate.swift */,
 				7492C0852AD6B69A0007EB73 /* SceneDelegate.swift */,
 			);
@@ -195,7 +180,8 @@
 		7492C0982AD6BB480007EB73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0FF2AD80B100007EB73 /* Views */,
+				7492C0EC2AD735060007EB73 /* Header */,
+				7492C1002AD80B180007EB73 /* Cells */,
 				7492C09A2AD6BB540007EB73 /* Components */,
 				7492C0992AD6BB4D0007EB73 /* Extensions */,
 			);
@@ -207,6 +193,7 @@
 			children = (
 				7492C0C42AD6E99F0007EB73 /* UIFont+CustomFonts.swift */,
 				7492C0F02AD73D4C0007EB73 /* UIView+HeaderView.swift */,
+				743F7E3D2ADEB6EE0053DAB7 /* String+Localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,12 +203,12 @@
 			children = (
 				7492C0C82AD6EE870007EB73 /* StyledLabel.swift */,
 				7492C0CA2AD7031F0007EB73 /* UnderlinedButton.swift */,
-				7492C0CC2AD709A80007EB73 /* ContainerView.swift */,
+				7492C0CC2AD709A80007EB73 /* RoundedView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		7492C09B2AD6BB6B0007EB73 /* Features */ = {
+		7492C09B2AD6BB6B0007EB73 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
 				7492C09D2AD6BBE50007EB73 /* Home */,
@@ -231,14 +218,13 @@
 				7492C0D22AD710930007EB73 /* SingleCard */,
 				7492C0CE2AD70F730007EB73 /* TabBar */,
 			);
-			path = Features;
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		7492C09C2AD6BB790007EB73 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				7492C08C2AD6B69B0007EB73 /* Assets.xcassets */,
-				7492C0AD2AD6E7C50007EB73 /* Fonts */,
 				7492C0912AD6B69B0007EB73 /* Info.plist */,
 				7492C08E2AD6B69B0007EB73 /* LaunchScreen.storyboard */,
 			);
@@ -248,9 +234,6 @@
 		7492C09D2AD6BBE50007EB73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				743F7DFC2AD97D980053DAB7 /* Enumerations */,
-				7492C0A12AD6BC8A0007EB73 /* Extensions */,
-				7492C0A02AD6BC850007EB73 /* Models */,
 				7492C09F2AD6BC010007EB73 /* Views */,
 				7492C09E2AD6BBF70007EB73 /* Controllers */,
 			);
@@ -261,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				7492C0872AD6B69A0007EB73 /* HomeViewController.swift */,
+				7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */,
+				7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,27 +254,9 @@
 			isa = PBXGroup;
 			children = (
 				7492C0A22AD6BD930007EB73 /* HomeView.swift */,
-				7492C0F82AD7E6950007EB73 /* Cells */,
+				7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		7492C0A02AD6BC850007EB73 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7492C0F42AD7DEBC0007EB73 /* CardModels.swift */,
-				743F7DFF2AD97DD50053DAB7 /* TransactionModels.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7492C0A12AD6BC8A0007EB73 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7492C0FB2AD805CA0007EB73 /* HomeViewController+UITableView.swift */,
-				7492C1032AD8174B0007EB73 /* HomeViewController+UICollectionView.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7492C0AD2AD6E7C50007EB73 /* Fonts */ = {
@@ -328,23 +295,14 @@
 		7492C0CE2AD70F730007EB73 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				7492C0CF2AD70F930007EB73 /* Controllers */,
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
-		7492C0CF2AD70F930007EB73 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
 				7492C0EA2AD717780007EB73 /* TabBarViewController.swift */,
 			);
-			path = Controllers;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		7492C0D22AD710930007EB73 /* SingleCard */ = {
 			isa = PBXGroup;
 			children = (
-				7492C10F2AD854BE0007EB73 /* Extensions */,
 				7492C10C2AD851120007EB73 /* Models */,
 				7492C0D92AD7143B0007EB73 /* Views */,
 				7492C0D82AD714350007EB73 /* Contollers */,
@@ -399,6 +357,9 @@
 			isa = PBXGroup;
 			children = (
 				7492C1072AD81B510007EB73 /* SingleCardViewController.swift */,
+				7492C1102AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift */,
+				7492C1162AD896900007EB73 /* SingleCardViewController+UITableView.swift */,
+				743F7E402ADEFB5B0053DAB7 /* UINavigationController+GestureRecognizers.swift */,
 			);
 			path = Contollers;
 			sourceTree = "<group>";
@@ -453,23 +414,6 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		7492C0F82AD7E6950007EB73 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				7492C0F92AD7E6C30007EB73 /* MyCardCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		7492C0FF2AD80B100007EB73 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7492C0EC2AD735060007EB73 /* Header */,
-				7492C1002AD80B180007EB73 /* Cells */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		7492C1002AD80B180007EB73 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,15 +437,6 @@
 				7492C10D2AD8511E0007EB73 /* ButtonModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		7492C10F2AD854BE0007EB73 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7492C1102AD854EF0007EB73 /* SingleCardViewController+CollectionView.swift */,
-				7492C1162AD896900007EB73 /* SingleCardViewController+UITableView.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,6 +510,7 @@
 				7492C0BA2AD6E7D60007EB73 /* Inter-Black.ttf in Resources */,
 				7492C0BD2AD6E7D60007EB73 /* Inter-Thin.ttf in Resources */,
 				7492C0BC2AD6E7D60007EB73 /* Inter-Light.ttf in Resources */,
+				743F7E3B2ADEB5C50053DAB7 /* Localizable.xcstrings in Resources */,
 				7492C0C32AD6E84E0007EB73 /* SF-Pro-Text-Regular.otf in Resources */,
 				7492C0B82AD6E7D60007EB73 /* Inter-SemiBold.ttf in Resources */,
 				7492C0902AD6B69B0007EB73 /* LaunchScreen.storyboard in Resources */,
@@ -599,32 +535,28 @@
 				7492C0F12AD73D4C0007EB73 /* UIView+HeaderView.swift in Sources */,
 				7492C0882AD6B69A0007EB73 /* HomeViewController.swift in Sources */,
 				7492C0E92AD715570007EB73 /* AccountView.swift in Sources */,
+				743F7E412ADEFB5B0053DAB7 /* UINavigationController+GestureRecognizers.swift in Sources */,
 				7492C0A32AD6BD930007EB73 /* HomeView.swift in Sources */,
 				7492C0E12AD714FE0007EB73 /* MyCardsViewController.swift in Sources */,
+				743F7E3E2ADEB6EE0053DAB7 /* String+Localized.swift in Sources */,
 				7492C1132AD856730007EB73 /* ActivityTableViewCell.swift in Sources */,
 				7492C0842AD6B69A0007EB73 /* AppDelegate.swift in Sources */,
 				7492C0DF2AD714E00007EB73 /* TransactionsViewController.swift in Sources */,
 				7492C0DD2AD714C70007EB73 /* TransactionsView.swift in Sources */,
 				7492C0C92AD6EE870007EB73 /* StyledLabel.swift in Sources */,
 				7492C0EB2AD717780007EB73 /* TabBarViewController.swift in Sources */,
-				743F7E022AD97E050053DAB7 /* TransactionStatus.swift in Sources */,
 				7492C0CB2AD7031F0007EB73 /* UnderlinedButton.swift in Sources */,
 				7492C0E72AD715470007EB73 /* MyCardsView.swift in Sources */,
 				7492C0C52AD6E99F0007EB73 /* UIFont+CustomFonts.swift in Sources */,
 				7492C0E52AD715260007EB73 /* AccountViewController.swift in Sources */,
-				7492C0AC2AD6DE960007EB73 /* Strings.swift in Sources */,
 				7492C10E2AD8511E0007EB73 /* ButtonModel.swift in Sources */,
 				7492C10B2AD83CFE0007EB73 /* ButtonsCollectionViewCell.swift in Sources */,
 				7492C1152AD879CD0007EB73 /* TableViewSectionHeader.swift in Sources */,
-				743F7E002AD97DD50053DAB7 /* TransactionModels.swift in Sources */,
-				7492C0F52AD7DEBC0007EB73 /* CardModels.swift in Sources */,
 				7492C1022AD80B4B0007EB73 /* TransactionCollectionCell.swift in Sources */,
-				743F7E042AD97E220053DAB7 /* TransactionType.swift in Sources */,
-				7492C0CD2AD709A80007EB73 /* ContainerView.swift in Sources */,
+				7492C0CD2AD709A80007EB73 /* RoundedView.swift in Sources */,
 				7492C0862AD6B69A0007EB73 /* SceneDelegate.swift in Sources */,
 				7492C1082AD81B510007EB73 /* SingleCardViewController.swift in Sources */,
 				7492C1062AD81B3B0007EB73 /* SingleCardView.swift in Sources */,
-				743F7DFE2AD97DBF0053DAB7 /* AvailableServices.swift in Sources */,
 				7492C1172AD896900007EB73 /* SingleCardViewController+UITableView.swift in Sources */,
 				7492C0FA2AD7E6C30007EB73 /* MyCardCell.swift in Sources */,
 			);
